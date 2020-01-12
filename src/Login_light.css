@@ -1,0 +1,42 @@
+.SideBar {
+  background-image: url(./images/winter_nature.jpg);
+  height: 100vh; 
+  width: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: cadetblue;
+
+}
+
+.AuthArea{
+  margin-top: 15vh;
+  margin-bottom: 20vh;
+  text-align: left;
+  
+}
+.Form{
+  margin-left: 0vw;
+}
+.Header{
+  margin-left: 0vw;
+  font: outline;
+  margin-bottom: 2vw;
+  font-size: xx-large;
+}
+.TextField{
+  margin-left: 0vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  text-shadow: aquamarine;
+  
+}
+.CheckBox{
+  font-size:x-small;
+  
+}
+.ForgotPassword{
+  margin-left: 0vw;
+  margin-left: 0vw;
+  font-size:1vw;
+}
