@@ -10,7 +10,7 @@ function LoginLight() {
     <Container fluid >
       <Row >
         <Col className="SideBar" xs="2"></Col>
-        <Col className="AuthArea" xs="4">{AuthArea()}</Col>
+        <Col className="AuthArea" xs="auto">{AuthArea()}</Col>
       </Row>
     </Container>
   );
@@ -22,36 +22,38 @@ function AuthArea() {
       <p className="Header">
         Log in
       </p>
-       
-          <Col sm="25">
-            <Input type="email" name="email" id="exampleEmail" placeholder="Email" className="TextField" />
-          </Col>
 
-      
-          <Input type="password" name="password" id="examplePassword" placeholder="Password" className="TextField" />
+      <Col sm="25">
+        <Input type="email" name="email" id="exampleEmail" placeholder="Email" className="TextField" />
+      </Col>
 
-        <FormGroup check>
-          
-            <Row >
-              <Col sm="auto" >
-                <Input type="checkbox" className="CheckBox" />{' '}
-                remember me
+
+      <Input type="password" name="password" id="examplePassword" placeholder="Password" className="TextField" />
+
+      <FormGroup check>
+
+        <Row >
+          <Col sm="auto" >
+            <Input type="checkbox" className="CheckBox" />{' '}
+            remember me
               </Col>
-            </Row>
-     
-        </FormGroup>
-        <Row>
-          <Col sm="5" className="TextField">
-            <Button color="primary" size="l" block>Log In</Button>
-          </Col>
         </Row>
+
+      </FormGroup>
+      <Row>
+        <Col sm="5" className="TextField">
+          <Button color="primary" size="l" block>Log In</Button>
+        </Col>
+      </Row>
+      <FormGroup>
         <Col sm="left" >
           <NavLink href="#" className="ForgotPassword" block>Forgot Password</NavLink>
         </Col>
-        <FormText color="muted">
-          Contact Admin if unable to login.
+      </FormGroup>
+      <FormText color="muted">
+        Contact Admin if unable to login.
         </FormText>
-     
+
 
     </div>
   )
