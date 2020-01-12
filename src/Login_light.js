@@ -21,10 +21,12 @@ function LoginLight() {
 function AuthArea() {
   const [username, setusername] = useState('');
   const [password, setpassword] = useState('');
-
+  const [checkRemember, setCheckedRemember] = useState(false);
 
   async function LoginFunc() {
-   
+    console.log(checkRemember)
+    console.log(username)
+    console.log(password)
   }
 
   return (
@@ -39,14 +41,14 @@ function AuthArea() {
       <FormGroup check>
         <Row >
           <Col sm="auto" >
-            <Input type="checkbox" className="CheckBox" />{' '}
+            <Input type="checkbox" id="checkbox" className="CheckBox" onChange={f => setCheckedRemember(f.target.checked)} />{''}
             remember me
-              </Col>
+          </Col>
         </Row>
       </FormGroup>
       <Row>
         <Col sm="5" className="TextField">
-          <Button color="primary" size="l" block  onClick={ LoginFunc}>Log In</Button>
+          <Button color="primary" size="l" block onClick={LoginFunc}>Log In</Button>
         </Col>
       </Row>
       <FormGroup>
