@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login_light.css';
 import { Container, Row, Col } from 'reactstrap';
 import { Button, FormGroup, Input, FormText, NavLink } from 'reactstrap';
@@ -16,47 +16,51 @@ function LoginLight() {
   );
 }
 
+
+
 function AuthArea() {
+  const [username, setusername] = useState('');
+  const [password, setpassword] = useState('');
+
+
+  async function LoginFunc() {
+   
+  }
+
   return (
     <div className="AuthArea">
       <p className="Header">
-        Log in
+        Log In
       </p>
-
       <Col sm="25">
-        <Input type="email" name="email" id="exampleEmail" placeholder="Email" className="TextField" />
+        <Input type="email" name="email" id="exampleEmail" placeholder="Email" className="TextField" value={username} onInput={f => setusername(f.target.value)} />
       </Col>
-
-
-      <Input type="password" name="password" id="examplePassword" placeholder="Password" className="TextField" />
-
+      <Input type="password" name="password" id="examplePassword" placeholder="Password" className="TextField" value={password} onInput={f => setpassword(f.target.value)} />
       <FormGroup check>
-
         <Row >
           <Col sm="auto" >
             <Input type="checkbox" className="CheckBox" />{' '}
             remember me
               </Col>
         </Row>
-
       </FormGroup>
       <Row>
         <Col sm="5" className="TextField">
-          <Button color="primary" size="l" block>Log In</Button>
+          <Button color="primary" size="l" block  onClick={ LoginFunc}>Log In</Button>
         </Col>
       </Row>
       <FormGroup>
         <Col sm="left" >
-          <NavLink href="#" className="ForgotPassword" block>Forgot Password</NavLink>
+          <NavLink href="#" className="ForgotPassword" >Forgot Password</NavLink>
         </Col>
       </FormGroup>
       <FormText color="muted">
         Contact Admin if unable to login.
         </FormText>
-
-
     </div>
   )
 }
+
+
 
 export default LoginLight;
