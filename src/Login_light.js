@@ -1,19 +1,43 @@
 import React, { useState } from 'react';
 import { Button, Col, Container, FormGroup, FormText, Input, NavLink, Row } from 'reactstrap';
 import FloatingLabelInput from 'react-floating-label-input';
+import { ThemeProvider } from 'styled-components';
+// eslint-disable-next-line
+import { lightTheme, darkTheme } from './theme';
+import { GlobalStyles } from './global';
 import './Login_light.css';
 
-
-
 function LoginLight() {
+
+
+  var tempTime = new Date();
+  var time = tempTime.getHours();
+
+  var currentTheme;
+  if (time > 19) {
+    currentTheme = darkTheme
+  }
+  else if (time < 8) {
+    currentTheme = darkTheme
+  }
+  else {
+    currentTheme = lightTheme
+  }
+
+
   return (
-    <Container fluid >
-      <Row >
-        <Col className="SideBar" xs="2"></Col>
-        <Col className="AuthArea" xs="auto">{AuthArea()}</Col>
-      </Row>
-    </Container>
+    <ThemeProvider theme={currentTheme}>
+      <GlobalStyles />
+      <Container fluid >
+        <Row >
+
+          <Col className="SideBar" xs="2"></Col>
+          <Col className="AuthArea" xs="auto">{AuthArea()}</Col>
+        </Row>
+      </Container>
+    </ThemeProvider>
   );
+
 }
 
 

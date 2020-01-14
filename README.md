@@ -12,6 +12,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### ScreenShot
+Also currently the theme switches based on system time.
 
-![Image description](./src/images/Login_Light.png)
+### Light
+
+![Light Mode](./src/images/Login_Light.png)
+
+### Dark
+
+![Dark Mode](./src/images/Login_Dark.png)
