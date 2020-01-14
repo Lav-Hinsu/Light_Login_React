@@ -6,6 +6,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-color: cadetblue;
+  border-top-right-radius: 20vh;
+  border-bottom-right-radius: 20vh;
 
 }
 
