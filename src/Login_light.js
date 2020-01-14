@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { Button, Col, Container, FormGroup, FormText, Input, NavLink, Row } from 'reactstrap';
+import FloatingLabelInput from 'react-floating-label-input';
 import './Login_light.css';
-import { Container, Row, Col } from 'reactstrap';
-import { Button, FormGroup, Input, FormText, NavLink } from 'reactstrap';
 
 
 
@@ -15,7 +15,6 @@ function LoginLight() {
     </Container>
   );
 }
-
 
 
 function AuthArea() {
@@ -34,10 +33,26 @@ function AuthArea() {
       <p className="Header">
         Log In
       </p>
-      <Col sm="25">
-        <Input type="email" name="email" id="exampleEmail" placeholder="Email" className="TextField" value={username} onInput={f => setusername(f.target.value)} />
+      <Col sm="25" style={{ fontSize: 20 }}>
+        <FloatingLabelInput
+          type="email"
+          name="email"
+          label="Email"
+          id="exampleEmail"
+          className="TextField"
+          value={username}
+          onInput={f => setusername(f.target.value)} />
       </Col>
-      <Input type="password" name="password" id="examplePassword" placeholder="Password" className="TextField" value={password} onInput={f => setpassword(f.target.value)} />
+      <Col sm="25" style={{ fontSize: 20 }}>
+        <FloatingLabelInput
+          type="password"
+          name="password"
+          id="examplePassword"
+          label="Password"
+          className="TextField"
+          value={password}
+          onInput={f => setpassword(f.target.value)} />
+      </Col>
       <FormGroup check>
         <Row >
           <Col sm="auto" >
